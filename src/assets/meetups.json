@@ -1,0 +1,61 @@
+{
+   "meetups": [
+    {
+        "id": 1,
+        "title": "Meetup for Kids",
+        "details": "we are organizing a meetup for kids, where they can have fun and enjoy to do fun acticities and learn together with their friends.......",
+        "Address": "12 sveavagen",
+        "Date": "2020-10-20",
+        "image": "meet1"
+      },
+      {
+        "id": 2,
+        "title": "Meetup for Food Lovers",
+        "details": "we are organizing a meetup for kids, where",
+        "Address": "12 sveavagen",
+        "Date": "2020-11-20",
+        "image": "meet2"
+      },
+      {
+        "id": 3,
+        "title": "Meetup for Arts",
+        "details": "we are organizing a meetup for kids, where",
+        "Address": "12 sveavagen",
+        "image": "meet3",
+        "Date": "2020-10-20"
+      },
+      {
+        "id": 4,
+        "title": "Meetup for Techies",
+        "details": "we are organizing a meetup for kids, where",
+        "Address": "12 sveavagen",
+        "image": "meet4",
+        "Date": "2020-11-12"
+      },
+      {
+        "id": 5,
+        "title": "Meetup for dancers",
+        "details": "we are organizing a meetup for kids, where",
+        "Address": "12 sveavagen",
+        "image": "meet5",
+        "Date": "2020-11-11"
+      },
+      {
+        "id": 6,
+        "title": "Meetup for Yoga",
+        "details": "we are organizing a meetup for kids, where",
+        "Address": "12 sveavagen",
+        "image": "meet1",
+        "Date": "2020-11-12"
+      },
+      {
+        "title": "meetup for dancers",
+        "details": "for new dancers",
+        "Date": "",
+        "address": "stockholm 23",
+        "id": 7,
+        "image": "meet1"
+      }
+
+]
+}

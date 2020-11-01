@@ -31,7 +31,7 @@
 
 
 <script>
-import axios from "axios";
+/* import axios from "axios"; */
 // import Meet from "@/components/Meet.vue"
 
 
@@ -46,40 +46,62 @@ export default {
   data(){
     return{
        search: "",
-       meetups: [],
-      
+       msg:"Meetup"
+     /*   meetups: [],
+       */
        
     };
     
  },
 
- async created() {
-    try {
-      const res = await axios.get(` http://localhost:3000/meetups`);
-      this.meetups = res.data;
-    } catch (e) {
-      console.log(e);
-    }
+
+created() {
+    this.$store.dispatch("getData");
   },
-
-
-   computed: {
+  
+computed:{
+ meetups() {
+      return this.$store.state.meetups;
+    },
     filteredList() {
       return this.meetups.filter((meetup) => {
         return meetup.title.toLowerCase().includes(this.search.toLowerCase());
       });
     },
-  },
+},
+ 
 
+
+
+
+/* 
+//  async created() {
+//     try {
+//       const res = await axios.get(` http://localhost:3000/meetups`);
+//       this.meetups = res.data;
+//     } catch (e) {
+//       console.log(e);
+//     }
+//   },
+
+
+//    computed: {
+//     filteredList() {
+//       return this.meetups.filter((meetup) => {
+//         return meetup.title.toLowerCase().includes(this.search.toLowerCase());
+//       });
+//     },
+//   },
+ */
   // methods:{
   //    signUp(id){
   //     this.$router.push( '/MeetupList'+ id);
 
   //   }
     
-}
-  
 
+  
+}
  
 </script>
 

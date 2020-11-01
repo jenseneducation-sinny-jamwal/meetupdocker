@@ -5,7 +5,7 @@
                 
                     <h2 class="form-head">Create a MeetUp!</h2>
                     
-                    <form class="meetup-form" name="newMeetup" >
+                    <form  @submit.prevent="addMeetup()" class="meetup-form" name="newMeetup" >
                          
                         <label for="Meetuptitle">Meetup Name</label>
                         <input name="Meetupname" type="text" id="Meetupname" v-model="title">
@@ -18,8 +18,12 @@
                         
                         <label for="Adress">Adress</label>
                         <input name="Adress" type="text" id="Adress" v-model="address">
-                        
-                        <button class="form-button" @click="addMeetup()">ADD meetup</button>
+
+                        <label for="Picture">Picture</label>
+                         <input type="file" name="picture" id="picture" v-bind="meetups.image">  
+                       
+
+                         <button class="form-button" >ADD meetup</button>
                         
                     </form> 
                 </div>
@@ -46,6 +50,8 @@ export default {
             details:"",
             Date:"",
             address:"",
+            image:""
+
             
 
 
@@ -65,15 +71,17 @@ export default {
    methods: {
 
         async addMeetup(){
-           const res = await axios.post(baseURL, {title: this.title,details: this.details , Date: this.Date, address: this.address});
+           const res = await axios.post(baseURL, {title: this.title,details: this.details , Date: this.Date, address: this.address, image:this.image});
              this.meetups=[...this.meetups, res.data];
                 this.title="";
                 this.details="";
                 this.Date="";
                 this.address=""; 
+                this.image="";
        }
 
-   }
+   }, 
+
 
 
    
